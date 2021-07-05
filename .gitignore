@@ -4,3 +4,5 @@ api/emit_*.h
 elf/elf_loader.o
 elf/symbol_parser.o
 .vscode/
+*.out
+test_races/output/
