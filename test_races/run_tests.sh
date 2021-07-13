@@ -2,7 +2,7 @@
 
 for filepath in src/*.c; do
     filename=${filepath##*/}
-    gcc "$filepath" -fsanitize=thread -fPIE -pie -g -o ./output/${filename::-1}out |
+    gcc "$filepath" -lpthread -fPIE -pie -g -o ./output/${filename::-1}out
 done
 
 rm results.txt
