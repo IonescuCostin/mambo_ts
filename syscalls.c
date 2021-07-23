@@ -108,6 +108,7 @@ dbm_thread *dbm_create_thread(dbm_thread *thread_data, void *next_inst, sys_clon
   new_thread_data->clone_ret_addr = next_inst;
   new_thread_data->set_tid = set_tid;
   new_thread_data->clone_args = args;
+  new_thread_data->parent_thread = thread_data;
 
   pthread_attr_t attr;
   pthread_attr_init(&attr);

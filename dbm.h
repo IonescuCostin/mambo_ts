@@ -190,6 +190,7 @@ enum dbm_thread_status {
 typedef struct dbm_thread_s dbm_thread;
 struct dbm_thread_s {
   dbm_thread *next_thread;
+  dbm_thread *parent_thread;
   enum dbm_thread_status status;
 
   int free_block;

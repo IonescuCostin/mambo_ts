@@ -12,7 +12,7 @@ for filepath in output/*.out; do
     filename=${filepath##*/}
     printf "%.80s\n\n" "======================== ${filename::-4} ================================================" >> results.txt
 
-    ./"$filepath" |& grep "WARNING:" >> results.txt
+    ./../mambo_drd.out "$filepath" >> results.txt
 
     printf "\n" >> results.txt
 done
