@@ -77,7 +77,7 @@ memcheck:
 	PLUGINS="plugins/memcheck/memcheck.S plugins/memcheck/memcheck.c plugins/memcheck/naive_stdlib.c" OUTPUT_FILE=mambo_memcheck.out make
 
 drd:
-	PLUGINS="plugins/dataracedet/dataracedet.c plugins/dataracedet/dataracedet.h" OUTPUT_FILE=mambo_drd.out make
+	PLUGINS="plugins/dataracedet/dataracedet.c" OUTPUT_FILE=mambo_drd.out make
 
 imix:
 	PLUGINS="plugins/instruction_mix.c" OUTPUT_FILE=mambo_imix.out make

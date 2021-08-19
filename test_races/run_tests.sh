@@ -2,7 +2,7 @@
 
 for filepath in src/*.c; do
     filename=${filepath##*/}
-    gcc "$filepath" -lpthread -fPIE -pie -g -o ./output/${filename::-1}out
+    gcc "$filepath" -lpthread -static -fPIE -pie -g -o ./output/${filename::-1}out
 done
 
 rm results.txt
